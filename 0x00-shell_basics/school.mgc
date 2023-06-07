@@ -1,4 +1,2 @@
-school.mgc:         application/octet-stream
-ls:                    application/octet-stream
-thisisaschoolfile: School
-thisisatextfile:       text/plain
+0 string SCHOOL school data
+! :mime School
