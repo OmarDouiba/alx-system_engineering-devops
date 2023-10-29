@@ -2,4 +2,4 @@
 # Script that kill the process
 
 pid=$(pgrep -f "./4-to_infinity_and_beyond")
-killall "$pid"
+kill "$pid"
