@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script that kill the process
+
+pname="./7-highlander"
+pkill -f -9 $pname
