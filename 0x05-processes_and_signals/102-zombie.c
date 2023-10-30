@@ -28,6 +28,11 @@ int main(void)
 		}
 	}
 	infinite_while();
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
