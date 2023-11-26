@@ -42,9 +42,9 @@ Without a firewall and HTTPS, we face security issues. If requests are sent usin
 ## No monitoring?
 Without monitoring, we can't check our server's health, performance, and security.
 
-# [2. Secured and monitored web infrastructure]()
+# [2. Secured and monitored web infrastructure](https://imgur.com/gallery/MZikg0c)
 
-# [3. Scale up]()
+# [3. Scale up](https://raw.githubusercontent.com/hamzadev2010/alx-system_engineering-devops/master/0x09-web_infrastructure_design/3-scale_up.png)
 
 
 
