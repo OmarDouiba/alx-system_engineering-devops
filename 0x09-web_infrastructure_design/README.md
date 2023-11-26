@@ -1,5 +1,5 @@
 # [0. Simple web stack]()
-# [1. Distributed web infrastructure](https://imgur.com/a/iuhOTpY)
+# [1. Distributed web infrastructure](https://github.com/OmarDouiba/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure)
 In our Infrastructure Design, we have a load balancer and 3 servers. Each server has a web server of type Nginx, an application server, and a database server. 
 
 ### Web Server (Nginx):
