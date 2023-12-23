@@ -1,7 +1,8 @@
 #!/usr/bin/pup
 # Install the flask package
 package { 'python3':
-  ensure => '3.8.10',
+  ensure   => '3.8.10',
+  provider => 'pip3'
 }
 
 package { 'flask':
@@ -10,5 +11,6 @@ package { 'flask':
 }
 
 package {'Werkzeug':
-  ensure => '2.1.1'
+  ensure   => '2.1.1',
+  provider => 'pip3'
 }
