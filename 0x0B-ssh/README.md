@@ -45,3 +45,30 @@ PRIVATE_KEY_PATH="$HOME/.ssh/school"
 # SSH connection
 ssh -i "$PRIVATE_KEY_PATH" "$REMOTE_USER@$REMOTE_HOST"
 ```
+The -i option in the SSH command is used to specify the identity file (private key) to use for public key authentication.
+
+### Task 1
+
+```
+#!/bin/bash
+
+# Variables
+KEY_NAME="school"
+BITS=4096
+PASSPHRASE="betty"
+
+# Create RSA key pair
+ssh-keygen -t rsa -b "$BITS" -C "$KEY_NAME" -N "$PASSPHRASE" -f "$KEY_NAME"
+
+echo "RSA key pair has been created:"
+ls -l "$KEY_NAME" "$KEY_NAME.pub"
+
+```
+
+In the ssh-keygen command, the options -C, -N, and -f are used as follows:
+
+- `C`: This option allows you to provide a comment or label to help identify the key. In the script, it's used to set the comment of the key to be the same as the key name, which is "school" in this case.
+
+- `N`: This option allows you to specify a new passphrase for the key. In the script, it's used to set the passphrase for the private key to "betty."
+
+- `f`: This option allows you to specify the filename of the key file. In the script, it's used to set the filename of the private key to "school" and, by extension, the public key to "school.pub."
