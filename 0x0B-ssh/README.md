@@ -23,3 +23,25 @@
 - How to create an SSH RSA key pair
 - How to connect to a remote host using an SSH RSA key pair
 - The advantage of using #!/usr/bin/env bash instead of /bin/bash
+--------
+
+#### Specify the Key Explicitly:
+
+If you have multiple SSH keys, you might need to specify the correct key explicitly when connecting. You can do this using the -i option:
+
+
+    ssh -i /path/to/private/key.pem username@hostname
+
+### Task 0
+
+```
+#!/bin/bash
+
+# Variables
+REMOTE_HOST="8.8.8.8"
+REMOTE_USER="ubuntu"
+PRIVATE_KEY_PATH="$HOME/.ssh/school"
+
+# SSH connection
+ssh -i "$PRIVATE_KEY_PATH" "$REMOTE_USER@$REMOTE_HOST"
+```
