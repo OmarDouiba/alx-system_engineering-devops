@@ -23,12 +23,12 @@
 - How to create an SSH RSA key pair
 - How to connect to a remote host using an SSH RSA key pair
 - The advantage of using #!/usr/bin/env bash instead of /bin/bash
---------
+
+---
 
 #### Specify the Key Explicitly:
 
 If you have multiple SSH keys, you might need to specify the correct key explicitly when connecting. You can do this using the -i option:
-
 
     ssh -i /path/to/private/key.pem username@hostname
 
@@ -45,6 +45,7 @@ PRIVATE_KEY_PATH="$HOME/.ssh/school"
 # SSH connection
 ssh -i "$PRIVATE_KEY_PATH" "$REMOTE_USER@$REMOTE_HOST"
 ```
+
 The -i option in the SSH command is used to specify the identity file (private key) to use for public key authentication.
 
 ### Task 1
@@ -72,3 +73,7 @@ In the ssh-keygen command, the options -C, -N, and -f are used as follows:
 - `N`: This option allows you to specify a new passphrase for the key. In the script, it's used to set the passphrase for the private key to "betty."
 
 - `f`: This option allows you to specify the filename of the key file. In the script, it's used to set the filename of the private key to "school" and, by extension, the public key to "school.pub."
+
+(
+`-C is for setting a comment, -N is for setting the passphrase, and -f is for specifying the filename of the key files`
+)
