@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # SSH configuration file
+
 Host *
     HostName 100.25.147.143
     User ubuntu
