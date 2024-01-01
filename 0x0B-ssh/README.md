@@ -15,6 +15,8 @@
 
 - [SSH Crash Course | With Some DevOps](https://www.youtube.com/watch?v=hQWRp-FdTpc)
 
+- []()
+
 ### General
 
 - What is a server
@@ -77,3 +79,24 @@ In the ssh-keygen command, the options -C, -N, and -f are used as follows:
 (
 `-C is for setting a comment, -N is for setting the passphrase, and -f is for specifying the filename of the key files`
 )
+
+### Task 4 (file_line)
+
+- file_line Ensures that a given line is contained within a file. The implementation matches the full line, including whitespace at the beginning and end. If the line is not contained in the given file, Puppet will append the line to the end of the file to ensure the desired state. Multiple resources may be declared to manage multiple lines in the same file.
+
+```
+Example:
+
+    file_line { 'sudo_rule':
+      path => '/etc/sudoers',
+      line => '%sudo ALL=(ALL) ALL',
+    }
+
+    file_line { 'sudo_rule_nopw':
+      path => '/etc/sudoers',
+      line => '%sudonopw ALL=(ALL) NOPASSWD: ALL',
+    }
+
+    In this example, Puppet will ensure both of the specified
+    lines are contained in the file /etc/sudoers.
+```
