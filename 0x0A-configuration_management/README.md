@@ -7,6 +7,7 @@
 - [Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
 - [Puppet lint](http://puppet-lint.com/)
 - [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
+- [playlist](https://www.youtube.com/watch?v=fMTQvqZZH7g&list=PLV86BgbREluU45I9kxKr5fiSXQLte4uhs&index=3)
 
 ## Note on Versioning
 
