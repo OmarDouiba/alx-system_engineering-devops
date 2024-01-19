@@ -8,10 +8,11 @@
 - [Puppet lint](http://puppet-lint.com/)
 - [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
 
-Note on Versioning
+## Note on Versioning
+
 Your Ubuntu 20.04 VM should have Puppet 5.5 preinstalled.
 
-Install puppet
+### Install puppet
 
 ```
 $ apt-get install -y ruby=1:2.7+1 --allow-downgrades
@@ -24,7 +25,7 @@ You do not need to attempt to upgrade versions. This project is simply a set of 
 
 [Puppet 5 Docs](https://www.puppet.com/docs/puppet/5.5/puppet_index.html)
 
-Install _puppet-lint_
+### Install _puppet-lint_
 
 ```
 $ gem install puppet-lint
