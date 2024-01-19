@@ -1,6 +1,7 @@
 # Install Python 3
 package { 'python3':
-    ensure  => installed,
+    ensure  => 3.8.10,
+    provider    => 'pip3',
 }
 # Install Flask using pip3
 package { 'flask':
