@@ -80,6 +80,34 @@ In the ssh-keygen command, the options -C, -N, and -f are used as follows:
 `-C is for setting a comment, -N is for setting the passphrase, and -f is for specifying the filename of the key files`
 )
 
+### Task 3
+
+the config file exists in dir
+
+- _/etc/ssh/_
+
+we can read it by
+
+- _cat /etc/ssh/ssh_config_
+
+in this file we change
+
+- PasswordAuthentication yes
+
+  to
+
+- PasswordAuthentication no
+
+and
+
+- IdentityFile ~/.ssh/school
+
+this changes allow ssh to authenticate using school, and does not try to authenticate using a password
+
+to test
+
+- ssh -v ubuntu@98.98.98.98
+
 ### Task 4 (file_line)
 
 - file_line Ensures that a given line is contained within a file. The implementation matches the full line, including whitespace at the beginning and end. If the line is not contained in the given file, Puppet will append the line to the end of the file to ensure the desired state. Multiple resources may be declared to manage multiple lines in the same file.
