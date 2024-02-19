@@ -29,13 +29,14 @@ if __name__ == "__main__":
         if task.get('completed'):
             num_tasks_completed += 1
 
-    print("Employee {} is done with tasks({}/{}):".format(
-        employee_name, num_tasks_completed, num_tasks
-    ))
-
     titles = []
     for task in dict_todos_data:
         if task.get('completed'):
             titles.append("\t {}".format(task.get('title')))
+
+    print("Employee {} is done with tasks({}/{}):".format(
+        employee_name, num_tasks_completed, num_tasks
+    ))
+
     for title in titles:
         print(title)
