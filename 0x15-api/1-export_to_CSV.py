@@ -15,7 +15,7 @@ if __name__ == "__main__":
         str_data = response.read().decode("utf-8")
         dict_data = json.loads(str_data)
 
-    EMPLOYEE_NAME = dict_data[0].get('name')
+    user_name = dict_data[0].get('username')
 
     todos_url = "{}/todos?userId={}".format(url, argv[1])
     with urlopen(todos_url) as response:
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     csv_data = ''
     for task in to_dict_data:
         csv_data += '"{}","{}","{}","{}"\n'.format(
-            task.get("userId"), EMPLOYEE_NAME,
+            task.get("userId"), user_name,
             task.get('completed'), task.get('title'))
     with open("{}.csv".format(argv[1]), 'w') as file:
         file.write(csv_data)
