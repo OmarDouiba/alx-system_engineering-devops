@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     csv_data = ''
     for task in to_dict_data:
-        csv_data += '"{}", "{}", "{}", "{}"\n'.format(
+        csv_data += '"{}","{}","{}","{}"\n'.format(
             task.get("userId"), EMPLOYEE_NAME,
             task.get('completed'), task.get('title'))
     with open("{}.csv".format(argv[1]), 'w') as file:
