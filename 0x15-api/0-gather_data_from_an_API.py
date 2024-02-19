@@ -15,19 +15,19 @@ if __name__ == "__main__":
         str_data = response.read().decode("utf-8")
         dict_data = json.loads(str_data)
 
-    employee_name = dict_data[0].get('name')
+    EMPLOYEE_NAME = dict_data[0].get('name')
 
     todos_url = '{}/todos?userId={}'.format(url, argv[1])
     with urlopen(todos_url) as response:
         str_todos_data = response.read().decode('utf-8')
         dict_todos_data = json.loads(str_todos_data)
 
-    num_tasks = len(dict_todos_data)
-    num_tasks_completed = 0
+    TOTAL_NUMBER_OF_TASKS = len(dict_todos_data)
+    NUMBER_OF_DONE_TASKS = 0
 
     for task in dict_todos_data:
         if task.get('completed'):
-            num_tasks_completed += 1
+            NUMBER_OF_DONE_TASKS += 1
 
     titles = []
     for task in dict_todos_data:
@@ -35,7 +35,7 @@ if __name__ == "__main__":
             titles.append("\t {}".format(task.get('title')))
 
     print("Employee {} is done with tasks({}/{}):".format(
-        employee_name, num_tasks_completed, num_tasks
+        EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS
     ))
 
     for title in titles:
