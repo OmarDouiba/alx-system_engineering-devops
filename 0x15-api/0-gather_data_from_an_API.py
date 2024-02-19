@@ -4,9 +4,9 @@ script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress
 """
 if __name__ == "__main__":
-    from urllib.request import urlopen
-    from sys import argv
     import json
+    from sys import argv
+    from urllib.request import urlopen
 
     url = 'https://jsonplaceholder.typicode.com'
     users_url = '{}/users?id={}'.format(url, argv[1])
