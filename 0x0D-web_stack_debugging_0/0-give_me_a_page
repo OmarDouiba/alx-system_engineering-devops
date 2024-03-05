@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that install apache and ...
+sudo apt -y update
+sudo apt -y install apache
+echo "
