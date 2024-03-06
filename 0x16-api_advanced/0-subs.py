@@ -17,7 +17,7 @@ headers = {
 def number_of_subscribers(subreddit):
     """function that returns the number of subscribers"""
     try:
-        url = 'https://www.reddit.com/r/'
+        url = 'https://www.reddit.com/dev/api/'
         response = requests.get(url + subreddit + "/about.json",
                                 headers=headers, allow_redirects=False)
         return response.json()['data']['subscribers']
